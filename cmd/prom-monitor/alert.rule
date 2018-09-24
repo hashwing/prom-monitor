@@ -1,0 +1,10 @@
+groups:
+- name: example
+  rules:
+  - alert: HighErrorRate
+    expr: up{} > 0.5
+    for: 20s
+    labels:
+      severity: page
+    annotations:
+      summary: High request latency
